@@ -1,0 +1,45 @@
+#! /bin/sh
+killall sxhkd
+sxhkd -c ~/.config/sxhkd/sxhkdrc &
+killall notification-daemon
+killall dunst
+dunst -config ~/.config/dunst/dunstrc &
+
+#pgrep -x sxhkd > /dev/null || sxhkd &
+
+#bspc monitor -d 1 2 3 4
+bspc monitor eDP -d 1 2 3 4
+bspc monitor HDMI-1-0 -d 5 6 7 8
+
+bspc rule -a Pavucontrol state=floating
+bspc rule -a Gimp desktop=^8 follow=on state=floating
+bspc rule -a MEGAsync state=floating
+
+bspc config remove_disabled_monitors true
+
+bspc config border_width	1
+bspc config top_padding		33
+
+bspc config normal_border_color  "#484848"
+bspc config focused_border_color "#8D35C9"
+bspc config urgent_border_color  "#B58900"
+bspc config presel_border_color  "#26E2FF"
+
+bspc config window_gap           8
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+# config
+xsetroot -cursor_name left_ptr
+xinput set-prop 19 330 -0.8
+xinput set-prop 22 330 0.07
+xinput set-prop 22 348 1
+xinput set-prop 22 319 1
+autorandr --change
+
+#AutoStart
+picom --daemon
+nitrogen --restore &
+polybar -q &

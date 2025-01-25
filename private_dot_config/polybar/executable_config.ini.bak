@@ -1,0 +1,183 @@
+[global/wm]
+margin-bottom = 0
+margin-top = 0
+
+
+[colors]
+background = #24273a
+background-alt = #494d64
+foreground = #cad3f5
+primary = #f5bde6
+secondary = #8aadf4
+alert = #ed8796
+disabled = #707880
+transparent = #00000000
+
+
+[bar/center]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 23px
+radius = 0
+background = ${colors.transparent}
+foreground = ${colors.foreground}
+border-left-size = 8px
+border-right-size = 8px
+border-top-size = 8px
+border-color = ${colors.transparent}
+font-0 = "JetBrainsMono Nerd Font Mono:pixelsize=11:style=Regular;2"
+font-1 = "JetBrainsMono Nerd Font Mono:pixelsize=13.7:style=Regular;3"
+font-2 = "JetBrainsMono Nerd Font Mono:pixelsize=17:style=Regular;4"
+padding = 0
+dim = 1.0
+modules-left = left-arc xworkspaces right-arc
+modules-center = left-arc xwindow right-arc
+modules-right = left-arc systray pulseaudio separator bluetooth separator wlan separator eth separator battery separator date right-arc
+module-margin-left = 0
+module-margin-right = 0
+override-redirect = false
+wm-restack = i3
+enable-ipc = true
+cursor-click = pointer 
+cursor-scroll = ns-resize
+
+
+[module/left-arc]
+type = custom/text
+format-background = ${colors.transparent}
+content-foreground = ${colors.background}
+content = 
+content-font = 2
+
+
+[module/separator]
+type = custom/text
+content-background = ${colors.background}
+content-foreground = ${colors.background}
+content = -
+
+
+[module/right-arc]
+type = custom/text
+format-background = ${colors.transparent}
+content-foreground = ${colors.background}
+content = 
+content-font = 2
+
+
+[module/systray]
+type = internal/tray
+format-background = ${colors.background}
+tray-background = ${colors.background}
+tray-spacing = 8pt
+
+
+[module/xworkspaces]
+type = internal/xworkspaces
+pin-workspaces = true
+reverse-scroll = true
+format-background = ${colors.background}
+label-active = %name%
+label-active-background = ${colors.background-alt}
+label-active-underline= ${colors.primary}
+label-active-padding = 1
+label-occupied = %name%
+label-occupied-padding = 1
+label-occupied-background = ${colors.background}
+label-urgent = %name%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 1
+label-empty = %name%
+label-empty-background = ${colors.background}
+label-empty-foreground = ${colors.disabled}
+label-empty-padding = 1
+
+
+[module/xwindow]
+format-background = ${colors.background}
+type = internal/xwindow
+label = %title:0:60:...%
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume-prefix = "VOL "
+format-volume-prefix-foreground = ${colors.primary}
+format-volume = <label-volume>
+format-volume-background = ${colors.background}
+label-volume = %percentage%%
+label-muted = muted
+label-muted-foreground = ${colors.disabled}
+
+
+[module/bluetooth]
+type = custom/script
+exec = /bin/bash -c "if [ $(bluetoothctl show | awk '/Powered/ {print $2}') == 'yes' ]; then echo '󰂯'; else echo '󰂲'; fi"
+format-background = ${colors.background}
+label-font = 2
+
+
+[module/wlan]
+type = internal/network
+interface-type = wireless
+format-connected = %{T3}<ramp-signal>%{T-} <label-connected>
+ramp-signal-0 = 󰤯
+ramp-signal-1 = 󰤟
+ramp-signal-2 = 󰤢
+ramp-signal-3 = 󰤥
+ramp-signal-4 = 󰤨
+label-connected = %essid%
+label-disconnected = 󰖪
+label-disconnected-font = 3
+format-connected-background = ${colors.background}
+format-disconnected-background = ${colors.background}
+
+
+[module/eth]
+type = internal/network
+interface-type = wired
+label-connected = 󰍹
+label-disconnected = 󰶐
+label-connected-font = 3
+label-disconnected-font = 3
+format-connected-background = ${colors.background}
+format-disconnected-background = ${colors.background}
+
+
+[module/battery]
+type = internal/battery
+low-at = 20
+battery = BAT0
+adapter = ADP0
+format-discharging = <ramp-capacity> <label-discharging>
+label-charging = 󰂄 %percentage%%
+ramp-capacity-0 = 󰁺
+ramp-capacity-1 = 󰁻
+ramp-capacity-2 = 󰁼
+ramp-capacity-3 = 󰁽
+ramp-capacity-4 = 󰁾
+ramp-capacity-5 = 󰁿
+ramp-capacity-6 = 󰂀
+ramp-capacity-7 = 󰂁
+ramp-capacity-8 = 󰂂
+ramp-capacity-9 = 󰁹
+label-discharging = %percentage%%
+label-full = 󰁹 %percentage%%
+label-low = %percentage%%
+animation-low-0 = 󰂃
+animation-low-1 = 󰁹
+animation-low-framerate = 800
+format-low = <animation-low> <label-low>
+format-charging-background = ${colors.background}
+format-discharging-background = ${colors.background}
+format-low-foreground = ${colors.alert}
+
+
+[module/date]
+type = internal/date
+interval = 1
+date = %H:%M
+date-alt = %Y-%m-%d %H:%M:%S
+format-background = ${colors.background}
+label = %date%
+label-foreground = ${colors.primary}

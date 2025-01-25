@@ -1,0 +1,53 @@
+format = """
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$golang\
+$python\
+$fill\
+$cmd_duration\
+$line_break\
+$character"""
+
+add_newline = false
+
+[directory]
+style = "blue"
+
+[character]
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
+
+[git_branch]
+format = "[ $branch]($style) "
+style = "bright-black"
+
+[git_status]
+format = '[(\[$untracked$modified$staged$renamed$deleted$ahead_behind$stashed\] )](218)'
+style = "cyan"
+untracked = "?$count"
+modified = "!$count"
+staged = "+$count"
+stashed = "≡"
+
+[fill]
+symbol = " "
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "yellow"
+
+[nodejs]
+format = "[ $version ](bold green) "
+
+[golang]
+format = "[󰟓  $version ](bold cyan)"
+
+[python]
+format = '[${symbol} ${version} (\($virtualenv\) )]($style)'
+symbol = ""
+style = "bold yellow"
