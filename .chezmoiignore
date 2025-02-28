@@ -1,0 +1,12 @@
+README.md
+
+*.log
+*/*.log
+**/*.log
+
+backups/
+backups/**
+
+*.env
+*/*.env
+**/*.env
