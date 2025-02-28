@@ -1,0 +1,8 @@
+font-family = "JetBrainsMono NFM"
+theme = "catppuccin-macchiato"
+window-height = 26
+window-width = 80
+window-save-state = never
+background-opacity = 1.00
+window-theme = ghostty
+window-titlebar-background = #1e2030
