@@ -83,10 +83,6 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# Node.js
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
 # eza
 alias ls="eza -al --color=always --group-directories-first"
 
@@ -105,11 +101,7 @@ export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 # golang
-export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:$HOME/go/bin"
-
-# composer
-export PATH=$PATH:$HOME/.config/composer/vendor/bin
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -153,8 +145,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-export PATH="/home/deux/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/home/deux/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -162,3 +152,9 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 # yazi alias
 alias yz=yazi
+
+# jmeter
+export PATH="/opt/apache-jmeter-5.6.3/bin:$PATH"
+
+# asdf cli
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
