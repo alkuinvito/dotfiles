@@ -158,3 +158,5 @@ export PATH="/opt/apache-jmeter-5.6.3/bin:$PATH"
 
 # asdf cli
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+export PATH="/home/enigme/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/enigme/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
