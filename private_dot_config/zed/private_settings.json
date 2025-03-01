@@ -35,9 +35,7 @@
     "show_nav_history_buttons": false,
     "show_tab_bar_buttons": false
   },
-  // "inlay_hints": {
-  //   "enabled": true
-  // },
+  "tab_size": 2,
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false
