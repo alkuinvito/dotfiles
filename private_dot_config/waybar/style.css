@@ -1,0 +1,99 @@
+/* --rose-water: #f4dbd6;
+  --flamingo: #f0c6c6;
+  --pink: #f5bde6;
+  --mauve: #c6a0f6;
+  --red: #ed8796;
+  --maroon: #ee99a0;
+  --peach: #f5a97f;
+  --yellow: #eed49f;
+  --green: #a6da95;
+  --teal: #8bd5ca;
+  --sky: #91d7e3;
+  --sapphire: #7dc4e4;
+  --blue: #8aadf4;
+  --lavender: #b7bdf8;
+  --text: #cad3f5;
+  --subtext-1: #b8c0e0;
+  --subtext-0: #a5adcb;
+  --overlay-2: #939ab7;
+  --overlay-1: #8087a2;
+  --overlay-0: #6e738d;
+  --surface-2: #5b6078;
+  --surface-1: #494d64;
+  --surface-0: #363a4f;
+  --base: #24273a;
+  --mantle: #1e2030;
+  --crust: #181926; */
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 1rem;
+}
+
+window#waybar {
+  background: transparent;
+  color: #cad3f5;
+}
+
+#window {
+  font-weight: bold;
+}
+/*
+#workspaces {
+    padding: 0 5px;
+}
+*/
+
+#workspaces button {
+  padding: 0 5px;
+  background: transparent;
+  color: #cad3f5;
+}
+
+#workspaces button.active {
+  background: rgba(147, 154, 183, 0.5);
+}
+
+#clock,
+#battery,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#power-profiles-daemon {
+  padding: 3px;
+  margin: 0 2px;
+}
+
+#clock {
+  font-weight: bold;
+}
+
+#battery {
+  color: #cad3f5;
+}
+
+#battery.critical:not(.charging) {
+  color: #ed8796;
+}
+
+#network {
+}
+
+#network.disconnected {
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+}
+
+#custom-media {
+  color: #a6da95;
+}
+
+#tray {
+}
