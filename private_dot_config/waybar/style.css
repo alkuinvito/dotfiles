@@ -37,9 +37,12 @@ window#waybar {
   color: #cad3f5;
 }
 
+/*
 #window {
   font-weight: bold;
 }
+*/
+
 /*
 #workspaces {
     padding: 0 5px;
@@ -67,9 +70,11 @@ window#waybar {
   margin: 0 2px;
 }
 
+/*
 #clock {
   font-weight: bold;
 }
+*/
 
 #battery {
   color: #cad3f5;
