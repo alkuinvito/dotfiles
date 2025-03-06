@@ -96,10 +96,6 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 eval "$(zoxide init zsh)"
 alias cd="z"
 
-# dotnet
-export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
-
 # golang
 export PATH="$PATH:$HOME/go/bin"
 
@@ -139,7 +135,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 # eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/config.json)"
 
 # pnpm
-export PNPM_HOME="/home/enigme/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -160,5 +156,11 @@ export PATH="/opt/apache-jmeter-5.6.3/bin:$PATH"
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 # PHP
-export PATH="/home/enigme/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/home/enigme/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+export PATH="$HOME/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+
+# aws cli
+export PATH="/usr/local/bin/aws_completer:$PATH"
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/usr/local/bin/aws_completer' aws
