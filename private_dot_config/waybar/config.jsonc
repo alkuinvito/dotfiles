@@ -1,22 +1,17 @@
 // -*- mode: jsonc -*-
 {
-  // "layer": "top", // Waybar at top layer
-  // "position": "bottom", // Waybar position (top|bottom|left|right)
-  // "height": 30,
-  // "width": 1280,
-  "margin-left": 4,
-  "margin-right": 4,
-  "spacing": 4,
+  "margin-left": 8,
+  "margin-right": 8,
+  "spacing": 6,
   "modules-left": ["hyprland/workspaces", "custom/media"],
   "modules-center": ["hyprland/window"],
   "modules-right": [
+    "tray",
     "pulseaudio",
     "network",
     "power-profiles-daemon",
-    "backlight",
     "battery",
     "clock",
-    "tray",
     "custom/power",
   ],
   // Modules configuration
@@ -24,69 +19,23 @@
     "disable-scroll": true,
     "all-outputs": true,
     "warp-on-scroll": false,
-    "format": "{name}: {icon}",
-    "format-icons": {
-      "urgent": "",
-      "focused": "",
-      "default": "",
-    },
   },
-  // "mpd": {
-  //   "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-  //   "format-disconnected": "Disconnected ",
-  //   "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-  //   "unknown-tag": "N/A",
-  //   "interval": 5,
-  //   "consume-icons": {
-  //     "on": " ",
-  //   },
-  //   "random-icons": {
-  //     "off": "<span color=\"#f53c3c\"></span> ",
-  //     "on": " ",
-  //   },
-  //   "repeat-icons": {
-  //     "on": " ",
-  //   },
-  //   "single-icons": {
-  //     "on": "1 ",
-  //   },
-  //   "state-icons": {
-  //     "paused": "",
-  //     "playing": "",
-  //   },
-  //   "tooltip-format": "MPD (connected)",
-  //   "tooltip-format-disconnected": "MPD (disconnected)",
-  // },
-  // "idle_inhibitor": {
-  //   "format": "{icon}",
-  //   "format-icons": {
-  //     "activated": "",
-  //     "deactivated": "",
-  //   },
-  // },
   "tray": {
-    // "icon-size": 21,
     "spacing": 10,
   },
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}",
-  },
-  "backlight": {
-    // "device": "acpi_video1",
-    "scroll-step": 5,
-    "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "format-alt": "{:%a, %b %d}",
   },
   "battery": {
     "interval": 10,
     "states": {
       "critical": 20,
     },
-    "format": "{icon} {capacity}%",
-    "format-full": "{icon} {capacity}%",
-    "format-charging": "󰂄 {capacity}%",
-    "format-critical": "󰂃 {capacity}%",
+    "format": "{icon}<span size='xx-small'> </span>{capacity}%",
+    "format-full": "{icon}<span size='xx-small'> </span>{capacity}%",
+    "format-charging": "󰂄<span size='xx-small'> </span>{capacity}%",
+    "format-critical": "󰂃<span size='xx-small'> </span>{capacity}%",
     "format-alt": "{icon} {time}",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
   },
@@ -112,7 +61,7 @@
   },
   "pulseaudio": {
     "scroll-step": 5,
-    "format": "{icon} {volume}%",
+    "format": "{icon}<span size='xx-small'> </span>{volume}%",
     "format-muted": "󰸈",
     "format-source": "",
     "format-source-muted": "",
@@ -133,7 +82,7 @@
     "menu": "on-click",
     "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
     "menu-actions": {
-      "shutdown": "shutdown",
+      "shutdown": "poweroff",
       "reboot": "reboot",
       "suspend": "systemctl suspend",
       "hibernate": "systemctl hibernate",
