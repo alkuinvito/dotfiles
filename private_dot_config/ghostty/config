@@ -9,3 +9,5 @@ window-titlebar-background = #1e2030
 window-padding-x = 4
 window-padding-y = 4
 gtk-tabs-location = bottom
+gtk-custom-css = style.css
+gtk-wide-tabs = false
