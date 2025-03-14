@@ -86,6 +86,9 @@ setopt hist_find_no_dups
 # eza
 alias ls="eza -al --color=always --group-directories-first"
 
+# lazygit
+alias lg="lazygit"
+
 # brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
