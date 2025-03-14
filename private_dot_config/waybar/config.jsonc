@@ -20,6 +20,9 @@
     "all-outputs": true,
     "warp-on-scroll": false,
   },
+  "hyprland/window": {
+    "max-length": 72,
+  },
   "tray": {
     "spacing": 10,
   },
@@ -82,9 +85,10 @@
     "menu": "on-click",
     "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
     "menu-actions": {
+      "lock" : "hyprlock",
       "shutdown": "poweroff",
       "reboot": "reboot",
-      "suspend": "systemctl suspend",
+      "suspend": "hyprlock & disown && systemctl suspend",
       "hibernate": "systemctl hibernate",
     },
   },
