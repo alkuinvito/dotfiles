@@ -22,7 +22,7 @@
   "ui_font_size": 16,
   "ui_font_family": "JetBrainsMono Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
-  "buffer_font_size": 14.5,
+  "buffer_font_size": 14,
   "buffer_font_weight": 400,
   "buffer_line_height": "comfortable",
   "theme": {
@@ -30,18 +30,19 @@
     "light": "Catppuccin Latte",
     "dark": "Catppuccin Macchiato"
   },
+  // For transparent background
   // "experimental.theme_overrides": {
   //   "background.appearance": "transparent",
-  //   "background": "#181926aa",
-  //   "panel.background": "#1e2030aa",
-  //   "editor.background": "#24273aaa",
-  //   "status_bar.background": "#181926aa",
-  //   "tab_bar.background": "#181926aa",
-  //   "title_bar.background": "#181926aa",
-  //   "editor.gutter.background": "#24273aaa",
-  //   "terminal.background": "#24273aaa",
-  //   "tab.active_background": "#24273aaa",
-  //   "editor.active_line.background": "#363a4faa"
+  //   "background": "#181926dd",
+  //   "panel.background": "#1e2030dd",
+  //   "editor.background": "#24273add",
+  //   "status_bar.background": "#181926dd",
+  //   "tab_bar.background": "#181926dd",
+  //   "title_bar.background": "#181926dd",
+  //   "editor.gutter.background": "#24273add",
+  //   "terminal.background": "#24273add",
+  //   "tab.active_background": "#24273add",
+  //   "editor.active_line.background": "#363a4fdd"
   // },
   "tab_bar": {
     "show": true,
