@@ -7,7 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "assistant": {
+  "show_edit_predictions": false,
+  "edit_predictions": {
+    "mode": "eager",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "agent": {
+    "inline_assistant_model": {
+      "provider": "ollama",
+      "model": "gemma3:4b"
+    },
     "default_model": {
       "provider": "deepseek",
       "model": "deepseek-chat"
