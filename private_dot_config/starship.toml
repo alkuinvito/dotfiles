@@ -45,7 +45,7 @@ style = "yellow"
 format = "[ $version ](bold green) "
 
 [golang]
-format = "[󰟓  $version ](bold cyan)"
+format = "[󰟓 $version ](bold cyan)"
 
 [python]
 format = '[${symbol} ${version} (\($virtualenv\) )]($style)'
