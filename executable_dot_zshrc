@@ -155,9 +155,6 @@ alias yz=yazi
 # jmeter
 export PATH="/opt/apache-jmeter-5.6.3/bin:$PATH"
 
-# asdf cli
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
-
 # PHP
 export PATH="$HOME/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
@@ -167,3 +164,4 @@ export PATH="/usr/local/bin/aws_completer:$PATH"
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 complete -C '/usr/local/bin/aws_completer' aws
+eval "$(~/.local/bin/mise activate zsh)"
