@@ -8,14 +8,15 @@
   "modules-right": [
     "tray",
     "pulseaudio",
-    "network",
+    "custom/ethernet_status",
+    "network#wifi",
     "power-profiles-daemon",
     "battery",
     "clock",
     "custom/power",
   ],
   // Modules configuration
-  "hyrpland/workspaces": {
+  "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "warp-on-scroll": false,
@@ -53,14 +54,21 @@
       "power-saver": "",
     },
   },
-  "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "󰇄",
-    "tooltip-format": "{ifname} via {gwaddr} 󰇄",
-    "format-linked": "{ifname} (No IP) 󰇄",
-    "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+  "custom/ethernet_status": {
+    "exec": "$HOME/.config/waybar/scripts/ethernet_status.sh",
+    "interval": 30,
+    "return-type": "json",
+    "format": "{text}",
+    "tooltip": false
+  },
+  "network#wifi": {
+    "interface": "wlp4s0",
+    "format-wifi": "{essid} {icon}",
+    "format-linked": "󰤫",
+    "format-disconnected": "󰤮",
+    "format-disabled": "󰤮",
+    "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+    "tooltip": false
   },
   "pulseaudio": {
     "scroll-step": 5,
@@ -77,19 +85,19 @@
     "return-type": "json",
     "max-length": 40,
     "escape": true,
-    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources folder
+    "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null",
   },
   "custom/power": {
     "format": " ",
     "tooltip": false,
     "menu": "on-click",
-    "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+    "menu-file": "$HOME/.config/waybar/power_menu.xml",
     "menu-actions": {
       "lock" : "hyprlock",
+      "suspend": "hyprlock & disown && systemctl suspend",
+      "logout": "loginctl terminate-user $USER",
       "shutdown": "poweroff",
       "reboot": "reboot",
-      "suspend": "hyprlock & disown && systemctl suspend",
-      "hibernate": "systemctl hibernate",
     },
   },
 }
