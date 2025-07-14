@@ -1,10 +1,10 @@
 #!/bin/bash
 
 IF="eno1"
-IF_STATE=$(cat /sys/class/net/$IF/operstate)
+IF_STATE=$(nmcli -t -f GENERAL.STATE dev show eno1 | cut -d':' -f2 | awk '{$1=$1};1')
 
 # Check if interface is up
-if [[ "$IF_STATE" == "up" ]]; then
+if [[ "$IF_STATE" == 100* ]]; then
   # Check if we can ping
   if ping -q -c 1 -W 1 google.com > /dev/null; then
     echo '{"text": "󰛳", "class": "connected"}'
