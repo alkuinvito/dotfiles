@@ -10,7 +10,6 @@
     "pulseaudio",
     "custom/ethernet_status",
     "network#wifi",
-    "power-profiles-daemon",
     "battery",
     "clock",
     "custom/power",
@@ -28,6 +27,7 @@
     "spacing": 10,
   },
   "clock": {
+    "format": "{:%a<span size='xx-small'> </span>%d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%a, %b %d}",
   },
@@ -42,17 +42,6 @@
     "format-critical": "󰂃<span size='xx-small'> </span>{capacity}%",
     "format-alt": "{icon} {time}",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-  },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "󰊚",
-      "power-saver": "",
-    },
   },
   "custom/ethernet_status": {
     "exec": "$HOME/.config/waybar/scripts/ethernet_status.sh",
