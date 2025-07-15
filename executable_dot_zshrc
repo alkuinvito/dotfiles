@@ -152,9 +152,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # yazi alias
 alias yz=yazi
 
-# jmeter
-export PATH="/opt/apache-jmeter-5.6.3/bin:$PATH"
-
 # PHP
 export PATH="$HOME/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
@@ -164,4 +161,6 @@ export PATH="/usr/local/bin/aws_completer:$PATH"
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 complete -C '/usr/local/bin/aws_completer' aws
+
+# Mise
 eval "$(~/.local/bin/mise activate zsh)"
