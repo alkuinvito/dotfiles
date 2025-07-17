@@ -83,6 +83,9 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+# fix delete key
+bindkey "^[[3~" delete-char
+
 # eza
 alias ls="eza -al --color=always --group-directories-first"
 

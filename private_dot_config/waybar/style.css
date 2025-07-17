@@ -39,17 +39,22 @@ window#waybar {
 
 #window,
 #clock {
-  font-weight: 700;
+  font-weight: bold;
 }
 
 #workspaces button {
   padding: 0 5px;
   background: transparent;
-  color: #cad3f5;
+  color: #b8c0e0;
 }
 
 #workspaces button.active {
   background: rgba(147, 154, 183, 0.3);
+}
+
+#workspaces button:not(.empty) {
+  font-weight: bold;
+  color: #cad3f5;
 }
 
 #tray,
