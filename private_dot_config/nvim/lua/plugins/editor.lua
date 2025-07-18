@@ -1,9 +1,4 @@
 return {
-    {
-        "lewis6991/gitsigns.nvim",
-        event = "User FileOpened",
-        cmd = "Gitsigns",
-    },
     { "akinsho/bufferline.nvim", opts = {} },
     {
         "folke/which-key.nvim",

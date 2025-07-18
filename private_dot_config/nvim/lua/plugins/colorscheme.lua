@@ -9,12 +9,26 @@ return {
                 flavour = "macchiato",
                 transparent_background = true,
                 integrations = {
+                    blink_cmp = true,
                     cmp = true,
+                    dashboard = true,
                     gitsigns = true,
-                    telescope = true,
-                    treesitter = true,
-                    notify = true,
                     mini = true,
+                    neotree = true,
+                    notify = true,
+                    telescope = {
+                        enabled = true,
+                    },
+                    treesitter = true,
+                },
+                highlight_overrides = {
+                    macchiato = function(colors)
+                        return {
+                            CursorLine = { bg = "none" },
+                            LineNr = { fg = colors.overlay1 },
+                            CursorLineNr = { fg = colors.blue },
+                        }
+                    end,
                 },
             })
 
