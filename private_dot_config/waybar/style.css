@@ -44,12 +44,13 @@ window#waybar {
 
 #workspaces button {
   padding: 0 5px;
+  border-radius: 4px;
   background: transparent;
   color: #b8c0e0;
 }
 
 #workspaces button.active {
-  background: rgba(147, 154, 183, 0.3);
+  background: rgba(147, 154, 183, 0.5);
 }
 
 #workspaces button:not(.empty) {
