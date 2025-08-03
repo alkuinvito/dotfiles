@@ -1,5 +1,4 @@
 return {
-    { "akinsho/bufferline.nvim", opts = {} },
     {
         "folke/which-key.nvim",
         event = "VeryLazy",

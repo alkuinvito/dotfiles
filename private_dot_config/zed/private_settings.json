@@ -20,14 +20,15 @@
     "edit_prediction_provider": "none"
   },
   "agent": {
+    "default_profile": "ask",
     "inline_assistant_model": {
       "provider": "ollama",
-      "model": "gemma3:4b"
+      "model": "deepseek-r1:7b"
     },
     "default_model": {
       "provider": "deepseek",
       "model": "deepseek-chat"
-    },
+    }
   },
   "icon_theme": "Catppuccin Macchiato",
   "telemetry": {
@@ -41,8 +42,8 @@
   "buffer_font_weight": 400,
   "buffer_line_height": "comfortable",
   "theme": {
-    "mode": "system",
-    "light": "Catppuccin Latte",
+    "mode": "dark",
+    "light": "Catppuccin Macchiato",
     "dark": "Catppuccin Macchiato"
   },
   // For transparent background
@@ -59,6 +60,10 @@
   //   "tab.active_background": "#24273add",
   //   "editor.active_line.background": "#363a4fdd"
   // },
+  "tabs": {
+    "file_icons": true,
+    "show_diagnostics": "errors"
+  },
   "tab_bar": {
     "show": true,
     "show_nav_history_buttons": false,
@@ -68,5 +73,10 @@
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
   }
 }
