@@ -2,19 +2,18 @@
 {
   "margin-left": 8,
   "margin-right": 8,
-  "margin-top": 4,
+  "margin-top": 8,
   "spacing": 6,
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock"],
   "modules-right": [
     "tray",
-    "pulseaudio",
+    "wireplumber",
     "custom/ethernet_status",
     "network#wifi",
     "battery",
     "custom/power",
   ],
-  // Modules configuration
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
@@ -28,9 +27,6 @@
         },
     "warp-on-scroll": false,
   },
-  //"hyprland/window": {
-  //  "max-length": 72,
-  //},
   "tray": {
     "spacing": 10,
   },
@@ -66,15 +62,13 @@
     "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
     "tooltip": false
   },
-  "pulseaudio": {
-    "scroll-step": 5,
+  "wireplumber": {
     "format": "{icon}<span size='xx-small'> </span>{volume}%",
-    "format-muted": "󰸈",
-    "format-source": "",
-    "format-source-muted": "",
-    "format-icons": {
-      "default": ["󰕿", "󰖀", "󰕾"],
-    },
+    "format-muted": "󰝟",
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "format-source": "󰍬",
+    "format-source-muted": "󰍭",
+    "scroll-step": 5,
     "on-click": "pavucontrol",
   },
   "custom/power": {
