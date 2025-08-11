@@ -15,13 +15,12 @@ try_suppress_warnings = false
 app_paths = []
 
 [appearance]
-width = 900
-height = 593
+width = 800
+height = 520
 gsk_renderer = "cairo"
 icon_paths = ["/home/enigme/.config/sherlock/icons"]
 icon_size = 22
-use_base_css = true
-opacity = 1.0
+use_base_css = false
 mod_key_ascii = ["⇧", "⇧", "⌘", "⌘", "⎇", "✦", "✦", "⌘"]
 
 [behavior]
