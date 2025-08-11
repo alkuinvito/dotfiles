@@ -2,7 +2,7 @@
   --background: hsl(0, 0%, 9%);
   --foreground: hsl(230deg, 19%, 26%);
   --text: hsl(227deg, 68%, 88%);
-  --border: rgb(54, 58, 79);
+  --border: hsl(231deg, 16%, 34%);
 
   --tag-background: hsl(180, 0%, 30%);
   --tag-color: hsl(220, 10%, 100%);
@@ -115,7 +115,7 @@ window:not(#backdrop) {
   border-radius: 8px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  background-color: rgba(36, 39, 58, 0.85);
+  background-color: rgba(36, 39, 58, 0.90);
   border: 2px solid var(--border);
 }
 
@@ -291,12 +291,12 @@ row:nth-child(10) .tile.animate {
 }
 
 row:selected .tile {
-  background: hsl(from var(--foreground) h s l / 100%);
+  background-color: rgba(91, 96, 120, 0.5);
 }
 
 row:selected .tile.multi-active,
 .tile.multi-active {
-  background: hsl(from var(--foreground) h s l / 100%);
+  background-color: rgba(91, 96, 120, 0.5);
   border: 1px solid hsl(from var(--text) h s l / 20%);
 }
 
