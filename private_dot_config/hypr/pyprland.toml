@@ -1,0 +1,17 @@
+[pyprland]
+plugins = [
+ "menubar",
+ "scratchpads",
+ "workspaces_follow_focus",
+]
+
+[menubar]
+command = "waybar"
+monitors = ["HDMI-A-1", "DP-1"]
+
+[scratchpads.term_quake]
+animation = "fromTop"
+command = "ghostty --class=com.mitchellh.ghostty.term_quake"
+class = "com.mitchellh.ghostty.term_quake"
+size = "100% 100%"
+max_size = "820px 580px"
