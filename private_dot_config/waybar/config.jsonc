@@ -1,11 +1,11 @@
 // -*- mode: jsonc -*-
 {
-  "margin-left": 8,
-  "margin-right": 8,
-  "margin-top": 8,
+  "margin-left": 6,
+  "margin-right": 6,
+  "margin-top": 6,
   "spacing": 6,
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock"],
+  "modules-center": ["clock", "custom/notification"],
   "modules-right": [
     "tray",
     "wireplumber",
@@ -33,6 +33,26 @@
   "clock": {
     "format": "{:%a<span size='xx-small'> </span>%d<span size='xx-small'> </span>%b %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󰂚",
+      "none": "󰂜",
+      "dnd-notification": "󰂛",
+      "dnd-none": "󰪑",
+      "inhibited-notification": "󰂚",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
   },
   "battery": {
     "interval": 10,
