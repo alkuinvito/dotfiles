@@ -21,8 +21,8 @@
   "agent": {
     "default_profile": "ask",
     "inline_assistant_model": {
-      "provider": "ollama",
-      "model": "deepseek-r1:7b"
+      "provider": "deepseek",
+      "model": "deepseek-chat"
     },
     "default_model": {
       "provider": "deepseek",

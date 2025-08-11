@@ -37,35 +37,33 @@ window#waybar {
   color: #cad3f5;
 }
 
-#window,
-#clock {
-  font-weight: bold;
-}
-
 #workspaces button {
   padding: 0 5px;
-  border-radius: 4px;
+  border-radius: 6px;
   background: transparent;
-  color: #b8c0e0;
+  color: #a5adcb;
 }
 
 #workspaces button.active {
-  background: rgba(147, 154, 183, 0.5);
+  background: rgba(91, 96, 120, 0.5);
 }
 
 #workspaces button:not(.empty) {
-  font-weight: bold;
   color: #cad3f5;
 }
 
-#tray,
-#pulseaudio,
-#battery,
-#power-profiles-daemon,
-#network,
-#custom-media,
-#clock {
-  padding: 3px;
+.modules-center {
+  padding: 0 8px 0 12px;
+  background-color: rgba(91, 96, 120, 0.4);
+  border-radius: 6px;
+}
+
+.modules-center * {
+  background: transparent;
+}
+
+#custom-notification {
+  padding: 0 4px;
 }
 
 #battery {
@@ -80,3 +78,66 @@ window#waybar {
   color: #a6da95;
 }
 
+#network {
+  background-color: rgba(91, 96, 120, 0.5);
+  padding: 0 8px;
+  border-radius: 6px;
+}
+
+#network * {
+  background-color: transparent;
+  padding: 0 2px;
+}
+
+#custom-ethernet_status {
+  padding: 0 6px 0 0;
+}
+
+#pulseaudio {
+  padding: 0 8px;
+  background: rgba(91, 96, 120, 0.5);
+  border-radius: 6px;
+}
+
+#pulseaudio.vol {
+  margin: 0 6px 0 0;
+  border-radius: 0 4px 4px 0;
+}
+
+#pulseaudio-slider {
+  margin: 0;
+  padding: 0 0 0 12px;
+  background: rgba(91, 96, 120, 0.5);
+  border-radius: 4px 0 0 4px;
+}
+
+#pulseaudio-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  background: transparent;
+  box-shadow: none;
+}
+#pulseaudio-slider trough {
+  min-height: 8px;
+  min-width: 100px;
+  border-radius: 6px;
+  background-color: rgba(24, 25, 38, 0.4);
+}
+#pulseaudio-slider highlight {
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 6px;
+  background-color: #cad3f5;
+}
+
+#battery {
+  padding: 0 6px;
+  background-color: rgba(91, 96, 120, 0.5);
+  border-radius: 6px;
+}
+
+#custom-power {
+  padding: 0 6px;
+  background-color: rgba(91, 96, 120, 0.5);
+  border-radius: 6px;
+}
