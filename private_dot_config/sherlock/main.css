@@ -1,3 +1,5 @@
+@import "./dynamic.css";
+
 :root {
   --background: hsl(0, 0%, 9%);
   --foreground: hsl(230deg, 19%, 26%);
@@ -69,7 +71,7 @@ overshoot:backdrop {
   all: unset;
   padding: 0px;
   margin: 0px;
-  -gtk-secondary-caret-color: var(--background);
+  -gtk-secondary-caret-color: @base;
   outline-width: 0px;
   outline-offset: -3px;
   outline-style: dashed;
@@ -78,11 +80,11 @@ overshoot:backdrop {
 }
 
 label {
-  color: var(--text);
+  color: @text;
 }
 
 #overlay spinner {
-  color: var(--text);
+  color: @text;
 }
 
 row:selected,
@@ -94,29 +96,17 @@ row:selected,
   background: transparent;
 }
 
-scrolledwindow > viewport,
-scrolledwindow > viewport > *,
-listview,
-gridview,
-window {
-  background: var(--background);
-}
-
-#backdrop {
-  background: black;
-}
-
 window {
   background: transparent;
 }
 
 window:not(#backdrop) {
-  color: var(--text);
+  color: @text;
   border-radius: 8px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  background-color: rgba(36, 39, 58, 0.90);
-  border: 2px solid var(--border);
+  background-color: @baseAlpha;
+  border: 2px solid @surface;
 }
 
 /* SEARCH PAGE */
@@ -125,13 +115,13 @@ window:not(#backdrop) {
   border: none;
   background: transparent;
   min-height: 40px;
-  color: var(--text);
+  color: @text;
   font-size: 15px;
   padding-left: 20px;
 }
 
 #search-bar-holder {
-  border-bottom: 2px solid var(--border);
+  border-bottom: 2px solid @surface;
   padding: 5px 10px 4px 10px;
 }
 
@@ -169,14 +159,14 @@ window:not(#backdrop) {
 #search-bar placeholder {
   background: transparent;
   background-color: transparent;
-  color: hsl(from var(--text) h s l / 70%);
+  color: hsl(from @text h s l / 70%);
   font-weight: 500;
 }
 
 #category-type {
   font-size: 13px;
   font-weight: bold;
-  color: var(--text);
+  color: @text;
   opacity: 0.3;
   padding: 10px 20px 0px 20px;
 }
@@ -193,7 +183,7 @@ scrollbar {
 }
 
 scrollbar slider {
-  background: hsl(from var(--text) h s l / 10%);
+  background: hsl(from @text h s l / 10%);
   border: none;
 }
 
@@ -282,7 +272,7 @@ row:nth-child(10) .tile.animate {
 
 .tile #title {
   font-size: 15px;
-  color: var(--text);
+  color: @text;
 }
 
 .tile #icon {
@@ -291,13 +281,13 @@ row:nth-child(10) .tile.animate {
 }
 
 row:selected .tile {
-  background-color: rgba(91, 96, 120, 0.5);
+  background-color: @surfaceAlpha;
 }
 
 row:selected .tile.multi-active,
 .tile.multi-active {
-  background-color: rgba(91, 96, 120, 0.5);
-  border: 1px solid hsl(from var(--text) h s l / 20%);
+  background-color: @surfaceAlpha;
+  border: 1px solid hsl(from @text h s l / 20%);
 }
 
 .tile:selected .tag,
@@ -307,7 +297,7 @@ row:selected .tile.multi-active,
   padding: 2px 8px;
   color: var(--tag-color);
   box-shadow: 0px 0px 10px 0px rgba(2, 2, 2, 0.4);
-  border: 1px solid hsl(from var(--text) h s l / 10%);
+  border: 1px solid hsl(from @text h s l / 10%);
   margin-left: 7px;
 }
 
@@ -327,7 +317,7 @@ row:selected .tile.multi-active,
 
 #launcher-type {
   font-size: 10px;
-  color: hsl(from var(--text) h s l / 40%);
+  color: hsl(from @text h s l / 40%);
   margin-left: 0px;
 }
 
@@ -341,13 +331,13 @@ row:selected .tile.multi-active,
   padding: 5px 10px;
   background: transparent;
   border-radius: 5px;
-  border: 1px solid hsl(from var(--text) h s l / 10%);
+  border: 1px solid hsl(from @text h s l / 10%);
   box-shadow: 0px 0px 6px 0px rgba(15, 15, 15, 1);
 }
 
 .tile:selected #shortcut-holder {
   background: transparent;
-  color: hsl(from var(--text) h s l / 50%);
+  color: hsl(from @text h s l / 50%);
   box-shadow: 0px 0px 6px 0px rgba(22, 22, 22, 1);
 }
 
@@ -356,7 +346,7 @@ row:selected .tile.multi-active,
   background: transparent;
   font-size: 11px;
   font-weight: bold;
-  color: hsl(from var(--text) h s l / 50%);
+  color: hsl(from @text h s l / 50%);
 }
 
 #shortcut-modkey {
@@ -413,13 +403,13 @@ row:selected .tile.multi-active,
 #bulk-text-content-title {
   font-size: 17px;
   font-weight: bold;
-  color: var(--text);
+  color: @text;
   min-height: 20px;
 }
 
 #bulk-text-content-body {
   font-size: 14px;
-  color: var(--text);
+  color: @text;
   line-height: 1.4;
   min-height: 20px;
 }
@@ -453,14 +443,14 @@ gridview child:selected box {
 
 /* NEXT PAGE */
 .next_tile {
-  color: var(--text);
+  color: @text;
   background: transparent;
 }
 
 .next_tile #content-body {
   background: transparent;
   padding: 10px;
-  color: var(--text);
+  color: @text;
 }
 
 .raw_text,
@@ -508,13 +498,13 @@ gridview child:selected box {
   margin-left: 10px;
   font-size: 16px;
   font-weight: bold;
-  color: var(--text);
+  color: @text;
 }
 
 .error-tile #content-body {
   margin-left: 10px;
   font-size: 14px;
-  color: var(--text);
+  color: @text;
   line-height: 1.4;
   color: gray;
 }
@@ -522,12 +512,12 @@ gridview child:selected box {
 /* STATUS BAR */
 .status-bar {
   background: transparent;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid @surface;
   padding: 4px 10px 4px 20px;
 }
 
 .status-bar label {
-  color: hsl(from var(--text) h s l / 30%);
+  color: hsl(from @text h s l / 30%);
 }
 
 .status-bar #shortcut-key,
@@ -569,20 +559,20 @@ gridview child:selected box {
   padding: 5px;
   margin: 4px;
   background: transparent;
-  border: 1px solid var(--border);
+  border: 1px solid @surface;
   border-radius: 5px;
   box-shadow: unset;
 }
 
 #context-menu row {
-  color: hsl(from var(--text) h s l / 80%);
+  color: hsl(from @text h s l / 80%);
   transition: 0.1s ease;
   padding: 10px 20px;
   border-radius: 5px;
 }
 
 #context-menu label {
-  color: hsl(from var(--text) h s l / 80%);
+  color: hsl(from @text h s l / 80%);
   font-size: 13px;
 }
 
@@ -708,7 +698,7 @@ gridview child:selected box {
 }
 
 #timer-title {
-  color: hsl(from var(--text) h s l / 70%);
+  color: hsl(from @text h s l / 70%);
   font-size: 11px;
 }
 
@@ -725,7 +715,7 @@ gridview child:selected box {
 
 .emoji-item #emoji-name {
   font-size: 10px;
-  color: hsl(from var(--text) h s l / 30%);
+  color: hsl(from @text h s l / 30%);
 }
 
 #context-menu.emoji row {

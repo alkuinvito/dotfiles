@@ -1,29 +1,4 @@
-/* --rose-water: #f4dbd6;
-  --flamingo: #f0c6c6;
-  --pink: #f5bde6;
-  --mauve: #c6a0f6;
-  --red: #ed8796;
-  --maroon: #ee99a0;
-  --peach: #f5a97f;
-  --yellow: #eed49f;
-  --green: #a6da95;
-  --teal: #8bd5ca;
-  --sky: #91d7e3;
-  --sapphire: #7dc4e4;
-  --blue: #8aadf4;
-  --lavender: #b7bdf8;
-  --text: #cad3f5;
-  --subtext-1: #b8c0e0;
-  --subtext-0: #a5adcb;
-  --overlay-2: #939ab7;
-  --overlay-1: #8087a2;
-  --overlay-0: #6e738d;
-  --surface-2: #5b6078;
-  --surface-1: #494d64;
-  --surface-0: #363a4f;
-  --base: #24273a;
-  --mantle: #1e2030;
-  --crust: #181926; */
+@import "./colors.css";
 
 * {
   border: none;
@@ -34,27 +9,27 @@
 
 window#waybar {
   background: transparent;
-  color: #cad3f5;
+  color: @foreground;
 }
 
 #workspaces button {
   padding: 0 5px;
   border-radius: 6px;
   background: transparent;
-  color: #a5adcb;
+  color: @muted;
 }
 
 #workspaces button.active {
-  background: rgba(91, 96, 120, 0.5);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 #workspaces button:not(.empty) {
-  color: #cad3f5;
+  color: @foreground;
 }
 
 .modules-center {
   padding: 0 8px 0 12px;
-  background-color: rgba(91, 96, 120, 0.4);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 6px;
 }
 
@@ -67,7 +42,7 @@ window#waybar {
 }
 
 #battery {
-  color: #cad3f5;
+  color: @foreground;
 }
 
 #battery.critical:not(.charging) {
@@ -79,7 +54,7 @@ window#waybar {
 }
 
 #network {
-  background-color: rgba(91, 96, 120, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
   padding: 0 8px;
   border-radius: 6px;
 }
@@ -95,7 +70,7 @@ window#waybar {
 
 #pulseaudio {
   padding: 0 8px;
-  background: rgba(91, 96, 120, 0.5);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 6px;
 }
 
@@ -107,7 +82,7 @@ window#waybar {
 #pulseaudio-slider {
   margin: 0;
   padding: 0 0 0 12px;
-  background: rgba(91, 96, 120, 0.5);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 4px 0 0 4px;
 }
 
@@ -121,23 +96,23 @@ window#waybar {
   min-height: 8px;
   min-width: 100px;
   border-radius: 6px;
-  background-color: rgba(24, 25, 38, 0.4);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 #pulseaudio-slider highlight {
   min-width: 8px;
   min-height: 8px;
   border-radius: 6px;
-  background-color: #cad3f5;
+  background-color: @foreground;
 }
 
 #battery {
   padding: 0 6px;
-  background-color: rgba(91, 96, 120, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 6px;
 }
 
 #custom-power {
   padding: 0 6px;
-  background-color: rgba(91, 96, 120, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 6px;
 }

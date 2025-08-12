@@ -1,0 +1,10 @@
+backend = "fastresize"
+color_space = "lchmixed"
+palette = "harddark"
+
+
+[templates]
+hyprland = { src = 'hyprland.conf', dst = '~/.config/hypr/config/border.conf' }
+hyprlock = { src = 'hyprlock.conf', dst = '~/.config/hypr/config/hyprlock_dynamic.conf' }
+waybar = { src = 'waybar.conf', dst = '~/.config/waybar/colors.css' }
+sherlock = { src = 'sherlock.conf', dst = '~/.config/sherlock/dynamic.css' }
