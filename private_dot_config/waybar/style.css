@@ -20,7 +20,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(220, 220, 230, 0.2);
 }
 
 #workspaces button:not(.empty) {
@@ -29,7 +29,7 @@ window#waybar {
 
 .modules-center {
   padding: 0 8px 0 12px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(220, 220, 230, 0.2);
   border-radius: 6px;
 }
 
@@ -54,7 +54,7 @@ window#waybar {
 }
 
 #network {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(220, 220, 230, 0.2);
   padding: 0 8px;
   border-radius: 6px;
 }
@@ -70,7 +70,7 @@ window#waybar {
 
 #pulseaudio {
   padding: 0 8px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(220, 220, 230, 0.2);
   border-radius: 6px;
 }
 
@@ -82,7 +82,7 @@ window#waybar {
 #pulseaudio-slider {
   margin: 0;
   padding: 0 0 0 12px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(220, 220, 230, 0.2);
   border-radius: 4px 0 0 4px;
 }
 
@@ -96,7 +96,7 @@ window#waybar {
   min-height: 8px;
   min-width: 100px;
   border-radius: 6px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(220, 220, 230, 0.2);
 }
 #pulseaudio-slider highlight {
   min-width: 8px;
@@ -107,12 +107,12 @@ window#waybar {
 
 #battery {
   padding: 0 6px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(220, 220, 230, 0.2);
   border-radius: 6px;
 }
 
 #custom-power {
   padding: 0 6px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(220, 220, 230, 0.2);
   border-radius: 6px;
 }

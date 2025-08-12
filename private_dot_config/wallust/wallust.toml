@@ -1,7 +1,7 @@
 backend = "fastresize"
-color_space = "lchmixed"
-palette = "harddark"
-
+color_space = "lch"
+palette = "dark"
+check_contrast = true
 
 [templates]
 hyprland = { src = 'hyprland.conf', dst = '~/.config/hypr/config/border.conf' }

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # Waytrogen post-change hook
 # Waytrogen passes the wallpaper path as the first argument ($1)
 
@@ -9,4 +9,4 @@ WALLPAPER_PATH="$2"
 [ ! -f "$WALLPAPER_PATH" ] && exit 1
 
 # Update colorscheme with Wallust
-wallust run "$WALLPAPER_PATH"
+/home/enigme/.cargo/bin/wallust run "$WALLPAPER_PATH"

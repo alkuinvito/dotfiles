@@ -1,6 +1,6 @@
-@define-color text #C5C2D4;
-@define-color base #37373A;
-@define-color surface #514779;
-@define-color overlay #58585A;
-@define-color surfaceAlpha rgba(81,71,121, 0.8);
-@define-color baseAlpha rgba(55,55,58, 0.9);
+@define-color text #EFF9F2;
+@define-color base #373B3D;
+@define-color surface #438DBC;
+@define-color overlay #585C5E;
+@define-color surfaceAlpha rgba(67,141,188, 0.8);
+@define-color baseAlpha rgba(41,44,46, 0.9);
