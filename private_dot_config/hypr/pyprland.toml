@@ -7,7 +7,7 @@ plugins = [
 
 [menubar]
 command = "waybar"
-monitors = ["HDMI-A-1", "DP-1"]
+monitors = ["HDMI-A-1", "eDP-1"]
 
 [scratchpads.term_quake]
 animation = "fromTop"
