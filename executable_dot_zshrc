@@ -170,3 +170,22 @@ complete -C '/usr/local/bin/aws_completer' aws
 
 # Mise
 eval "$(~/.local/bin/mise activate zsh)"
+
+# Flutter
+export CHROME_EXECUTABLE="/usr/bin/brave-browser"
+export PATH="$HOME/development/flutter/bin:$PATH"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+# Android SDK
+export ANDROID_HOME="$HOME/development/Android/Sdk"
+export ANDROID_SDK_ROOT="$HOME/development/Android/Sdk"
+export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+export PATH="$ANDROID_HOME/emulator:$PATH"
+
+# bun completions
+[ -s "/home/enigme/.bun/_bun" ] && source "/home/enigme/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

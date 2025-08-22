@@ -7,16 +7,19 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "show_edit_predictions": false,
   "edit_predictions": {
+    "mode": "subtle",
     "copilot": {
       "proxy": null,
-      "proxy_no_verify": null
+      "proxy_no_verify": null,
+      "enterprise_uri": null
     },
     "enabled_in_text_threads": false
   },
+  "vim_mode": false,
+  "show_edit_predictions": true,
   "features": {
-    "edit_prediction_provider": "none"
+    "edit_prediction_provider": "supermaven"
   },
   "agent": {
     "default_profile": "ask",
@@ -25,8 +28,8 @@
       "model": "deepseek-chat"
     },
     "default_model": {
-      "provider": "deepseek",
-      "model": "deepseek-chat"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
     }
   },
   "icon_theme": "Catppuccin Macchiato",
