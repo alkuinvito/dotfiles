@@ -189,3 +189,6 @@ export PATH="$ANDROID_HOME/emulator:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# vi-mode terminal
+set -o vi

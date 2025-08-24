@@ -41,6 +41,12 @@ window#waybar {
   padding: 0 4px;
 }
 
+#tray {
+  padding: 0 8px;
+  background-color: rgba(220, 220, 230, 0.2);
+  border-radius: 6px;
+}
+
 #battery {
   color: @foreground;
 }
