@@ -18,10 +18,6 @@ vim.keymap.set("n", "<leader>q", "<cmd>q<cr>", { silent = false })
 -- Little one from Primeagen to mass replace string in a file
 vim.keymap.set("n", "<leader>s", [[:%s/\<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>]], { silent = false })
 
--- Navigate through buffers
-vim.keymap.set("n", "<S-Right>", ":bnext<CR>", { silent = false })
-vim.keymap.set("n", "<S-Left>", ":bprevious<CR>", { silent = false })
-
 -- Close currently active buffer
 vim.keymap.set("n", "<C-c>", ":bwipeout<CR>", { silent = false })
 

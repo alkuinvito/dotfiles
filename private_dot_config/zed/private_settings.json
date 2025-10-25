@@ -7,19 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "title_bar": {
+    "show_onboarding_banner": false,
+    "show_branch_icon": true
+  },
   "edit_predictions": {
-    "mode": "subtle",
-    "copilot": {
-      "proxy": null,
-      "proxy_no_verify": null,
-      "enterprise_uri": null
-    },
+    "mode": "eager",
     "enabled_in_text_threads": false
   },
   "vim_mode": false,
   "show_edit_predictions": true,
   "features": {
-    "edit_prediction_provider": "supermaven"
+    "edit_prediction_provider": "zed"
   },
   "agent": {
     "default_profile": "ask",
@@ -79,6 +78,20 @@
   "diagnostics": {
     "inline": {
       "enabled": true
+    }
+  },
+  "languages": {
+    "PHP": {
+      "language_servers": ["intelephense", "!phpactor"],
+      "format_on_save": "on",
+      "formatter": "language_server"
+    }
+  },
+  "lsp": {
+    "jdtls": {
+      "binary": {
+        "path": "/home/enigme/.local/jdtls/bin/jdtls"
+      }
     }
   }
 }
