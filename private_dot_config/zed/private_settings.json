@@ -15,6 +15,7 @@
     "mode": "eager",
     "enabled_in_text_threads": false
   },
+  // "disable_ai": true,
   "vim_mode": false,
   "show_edit_predictions": true,
   "features": {

@@ -5,7 +5,7 @@
   "margin-right": 6,
   "margin-top": 6,
   "spacing": 6,
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["niri/workspaces"],
   "modules-center": ["clock", "custom/notification"],
   "modules-right": [
     "tray",
@@ -118,23 +118,14 @@
     "max": 100,
     "orientation": "horizontal"
   },
-  // "wireplumber": {
-  //   "format": "{icon}<span size='xx-small'> </span>{volume}%",
-  //   "format-muted": "󰝟",
-  //   "format-icons": ["󰕿", "󰖀", "󰕾"],
-  //   "format-source": "󰍬",
-  //   "format-source-muted": "󰍭",
-  //   "scroll-step": 5,
-  //   "on-click": "pavucontrol",
-  // },
   "custom/power": {
     "format": "",
     "tooltip": false,
     "menu": "on-click",
     "menu-file": "$HOME/.config/waybar/power_menu.xml",
     "menu-actions": {
-      "lock" : "hyprlock",
-      "suspend": "hyprlock & disown && systemctl suspend",
+      "lock" : "swaylock -f",
+      "suspend": "systemctl suspend",
       "logout": "loginctl terminate-user $USER",
       "shutdown": "poweroff",
       "reboot": "reboot"
