@@ -12,12 +12,12 @@
     "show_branch_icon": true
   },
   "edit_predictions": {
-    "mode": "eager",
+    "mode": null,
     "enabled_in_text_threads": false
   },
   // "disable_ai": true,
   "vim_mode": false,
-  "show_edit_predictions": true,
+  "show_edit_predictions": false,
   "features": {
     "edit_prediction_provider": "zed"
   },
