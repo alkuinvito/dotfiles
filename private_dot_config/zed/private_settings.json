@@ -7,6 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
+  "git_panel": {
+    "tree_view": true,
+    "sort_by_path": true
+  },
   "title_bar": {
     "show_onboarding_banner": false,
     "show_branch_icon": true
@@ -82,6 +87,9 @@
     }
   },
   "languages": {
+    "Go": {
+      "show_edit_predictions": true
+    },
     "PHP": {
       "language_servers": ["intelephense", "!phpactor"],
       "format_on_save": "on",
