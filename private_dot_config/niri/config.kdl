@@ -274,7 +274,7 @@ spawn-at-startup "sunsetr"
 spawn-at-startup "swaync"
 spawn-sh-at-startup "gauntlet --minimized"
 spawn-sh-at-startup "swaybg -m fill -i /home/enigme/Pictures/backgrounds/wallhaven-vpx1op.png"
-spawn-sh-at-startup "swayidle -w timeout 601 'niri msg action power-off-monitors' timeout 600 'swaylock -f' before-sleep 'swaylock -f'"
+spawn-sh-at-startup "swayidle -w timeout 300 'niri msg action power-off-monitors' timeout 600 'swaylock -f --clock --indicator-idle-visible' timeout 900 'systemctl suspend' before-sleep 'swaylock -f --clock --indicator-idle-visible'"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"

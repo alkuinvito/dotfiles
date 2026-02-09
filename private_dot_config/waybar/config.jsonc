@@ -84,7 +84,8 @@
     "format-disconnected": "󰤮",
     "format-disabled": "󰤮",
     "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "~/.local/bin/networkmanager_dmenu"
   },
   "group/audio": {
     "orientation": "inherit",

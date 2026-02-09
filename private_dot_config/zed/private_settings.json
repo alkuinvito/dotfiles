@@ -7,9 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "disable_ai": true,
+  "agent_servers": {
+    "opencode": {
+      "type": "registry"
+    }
+  },
+  "disable_ai": false,
   "git_panel": {
-    "tree_view": true,
+    "tree_view": false,
     "sort_by_path": true
   },
   "title_bar": {
@@ -17,15 +22,13 @@
     "show_branch_icon": true
   },
   "edit_predictions": {
+    "provider": "zed",
     "mode": null,
     "enabled_in_text_threads": false
   },
   // "disable_ai": true,
   "vim_mode": false,
-  "show_edit_predictions": false,
-  "features": {
-    "edit_prediction_provider": "zed"
-  },
+  "show_edit_predictions": true,
   "agent": {
     "default_profile": "ask",
     "inline_assistant_model": {
@@ -33,8 +36,8 @@
       "model": "deepseek-chat"
     },
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "provider": "openrouter",
+      "model": "moonshotai/kimi-k2.5"
     }
   },
   "icon_theme": "Catppuccin Macchiato",
