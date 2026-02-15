@@ -1,6 +1,8 @@
 [default_apps]
+teams = "teams-for-linux --enable-features=UseOzonePlatform --ozone-platform=wayland --url {meeting_url}"
+calendar_client = "thunderbird"
 terminal = "ghostty"
-browser = "firefox"
+browser = "/usr/bin/brave-browser-stable %U"
 
 [units]
 lengths = "meters"
@@ -15,17 +17,25 @@ try_suppress_warnings = false
 app_paths = []
 
 [appearance]
-width = 800
-height = 520
+width = 900
+height = 593
+margins = [0, 0, 0, 0]
+anchor = ""
 gsk_renderer = "cairo"
 icon_paths = ["/home/enigme/.config/sherlock/icons"]
 icon_size = 22
-use_base_css = false
+use_base_css = true
+use_system_theme = false
+opacity = 0.95
 mod_key_ascii = ["⇧", "⇧", "⌘", "⌘", "⎇", "✦", "✦", "⌘"]
+num_shortcuts = 5
+placeholder = "Search:"
 
 [behavior]
 use_xdg_data_dir_icons = false
 animate = true
+use_lr_nav = false
+remember_query = false
 
 [binds]
 up = "control-k"
@@ -53,7 +63,7 @@ daemonize = false
 
 [caching]
 enable = true
-cache = "/home/enigme/.cache/sherlock/sherlock_desktop_cache.json"
+cache = "/home/enigme/.cache/sherlock/desktop_files.bin"
 
 [expand]
 enable = false
@@ -66,10 +76,10 @@ opacity = 0.6
 edge = "top"
 
 [status_bar]
-enable = false
+enable = true
 
 [search_bar_icon]
 enable = true
 icon = "system-search-symbolic"
-icon_back = "go-previous-symbolic"
+icon_back = "sherlock-back"
 size = 22
