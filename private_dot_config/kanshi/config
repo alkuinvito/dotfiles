@@ -3,16 +3,12 @@ profile Docked {
     output "Microstep MSI G244F E2 BB4H214500349" mode 1920x1080@180Hz position 0,0
 }
 
-profile Mirror {
-	output eDP-1 mode 1920x1080@120Hz position 0,0
-	output HDMI-A-1 mode 1920x1080 position 0,0
-}
-
 profile Presentation {
 	output eDP-1 mode 1920x1080@120Hz position 0,0
-	output HDMI-A-1 mode 1920x1080 position 0,1080
+	output HDMI-A-1 enable position 1920,0
 }
 
 profile Mobile {
 	output eDP-1 enable position 0,0 scale 1
 }
+

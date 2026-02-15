@@ -7,14 +7,15 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_font_size": 14.0,
   "agent_servers": {
     "opencode": {
       "type": "registry"
     }
   },
-  "disable_ai": false,
+  "disable_ai": true,
   "git_panel": {
-    "tree_view": false,
+    "tree_view": true,
     "sort_by_path": true
   },
   "title_bar": {
@@ -45,10 +46,9 @@
     "metrics": false,
     "diagnostics": false
   },
-  "ui_font_size": 16,
+  "ui_font_size": 16.0,
   "ui_font_family": "JetBrainsMono Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
-  "buffer_font_size": 14,
   "buffer_font_weight": 400,
   "buffer_line_height": "comfortable",
   "theme": {
