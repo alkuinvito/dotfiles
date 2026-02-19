@@ -273,7 +273,7 @@ spawn-at-startup "waybar"
 spawn-at-startup "sunsetr"
 spawn-at-startup "swaync"
 spawn-at-startup "swayosd-server"
-spawn-sh-at-startup "sherlock --daemonize"
+// spawn-sh-at-startup "sherlock --daemonize"
 spawn-sh-at-startup "swaybg -m fill -i /home/enigme/Pictures/backgrounds/wallhaven-vpx1op.png"
 spawn-sh-at-startup "swayidle -w timeout 300 'niri msg action power-off-monitors' timeout 600 'swaylock -f --clock --indicator-idle-visible' timeout 900 'systemctl suspend' before-sleep 'swaylock -f --clock --indicator-idle-visible'"
 

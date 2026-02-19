@@ -1,6 +1,6 @@
 font-family = "JetBrainsMono Nerd Font Mono"
 font-feature = -calt
-theme = "catppuccin-macchiato"
+theme = Catppuccin Macchiato
 window-height = 27
 window-width = 80
 window-save-state = never

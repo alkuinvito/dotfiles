@@ -1,37 +1,5 @@
 [
   {
-    "name": "Weather",
-    "alias": null,
-    "tag_start": null,
-    "tag_end": null,
-    "display_name": null,
-    "on_return": null,
-    "next_content": null,
-    "type": "weather",
-    "priority": 1.0,
-    "exit": true,
-    "shortcut": false,
-    "spawn_focus": false,
-    "async": true,
-    "home": "OnlyHome",
-    "args": {
-      "icon_theme": "Sherlock",
-      "location": "bogor",
-      "update_interval": 60
-    },
-    "binds": null,
-    "actions": [
-      {
-        "name": "Show in Web",
-        "exec": "https://www.wttr.in/bogor",
-        "icon": "sherlock-link",
-        "method": "web_launcher",
-        "exit": true
-      }
-    ],
-    "add_actions": null
-  },
-  {
     "name": "Spotify",
     "alias": null,
     "tag_start": null,
@@ -98,10 +66,7 @@
     "async": false,
     "home": "Search",
     "args": {
-      "capabilities": [
-        "calc.math",
-        "calc.units"
-      ]
+      "capabilities": ["calc.math", "calc.units"]
     },
     "binds": null,
     "actions": null,
