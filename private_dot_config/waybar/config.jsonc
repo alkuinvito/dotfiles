@@ -125,7 +125,7 @@
     "menu": "on-click",
     "menu-file": "$HOME/.config/waybar/power_menu.xml",
     "menu-actions": {
-      "lock" : "swaylock -f",
+      "lock" : "swaylock -f --clock --indicator-idle-visible",
       "suspend": "systemctl suspend",
       "logout": "loginctl terminate-user $USER",
       "shutdown": "poweroff",
