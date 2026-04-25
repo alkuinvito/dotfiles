@@ -1,0 +1,49 @@
+[[profile]]
+name = "Docked"
+
+  [[profile.output]]
+  search = "HDMI-A-1"
+  enable = true
+  position  = "0,0"
+
+  [[profile.output]]
+  search = "eDP-1"
+  enable = false
+
+[[profile]]
+name = "Presentation"
+
+  [[profile.output]]
+  search = "eDP-1"
+  enable = true
+  mode = "1920x1080@120"
+  position = "0,0"
+
+  [[profile.output]]
+  search = "HDMI-A-1"
+  enable = true
+  position = "1920,0"
+
+[[profile]]
+name = "Mirror"
+
+  [[profile.output]]
+  search = "eDP-1"
+  enable = true
+  mode = "1920x1080@60"
+  position = "0,0"
+
+  [[profile.output]]
+  search = "HDMI-A-1"
+  enable = true
+  mode = "1920x1080@60"
+  position = "0,0"
+
+[[profile]]
+name = "Mobile"
+
+  [[profile.output]]
+  search = "eDP-1"
+  enable = true
+  position = "0,0"
+  scale = 1.0
