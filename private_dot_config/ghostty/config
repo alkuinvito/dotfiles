@@ -5,6 +5,7 @@ window-height = 27
 window-width = 80
 window-save-state = never
 background-opacity = 0.95
+background-blur = true
 window-theme = ghostty
 window-titlebar-background = #1e2030
 window-padding-x = 4

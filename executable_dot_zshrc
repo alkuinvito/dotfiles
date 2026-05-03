@@ -168,7 +168,7 @@ complete -C '/usr/local/bin/aws_completer' aws
 eval "$(~/.local/bin/mise activate zsh)"
 
 # Flutter
-export CHROME_EXECUTABLE="/usr/bin/brave-browser"
+export CHROME_EXECUTABLE="/usr/bin/brave-origin"
 export PATH="$HOME/development/flutter/bin:$PATH"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
